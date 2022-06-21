@@ -1,0 +1,2 @@
+/* TODOITEM */
+export const SET_TODOITEM_INFO = 'SET_TODOITEM_INFO'

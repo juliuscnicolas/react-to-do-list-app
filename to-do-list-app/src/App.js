@@ -1,23 +1,27 @@
 import logo from './logo.svg';
 import './App.css';
+import Menu from './components/Menu/Menu';
+import ToDos from './components/ToDo/ToDos';
+// redux
+import { useSelector, useDispatch } from 'react-redux'
 
-function App() {
+//materialUI
+import Typography from '@mui/material/Typography';
+import { Container } from '@mui/system';
+
+const App = () => {
+
+  const users = useSelector(state => state.users)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Container>
+        <Typography variant="h3" component="div" gutterBottom>
+          To Do List App
+        </Typography>
+        <Menu></Menu>
+        <ToDos items={users.info.items}></ToDos>
+      </Container>
     </div>
   );
 }
