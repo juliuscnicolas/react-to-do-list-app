@@ -1,6 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
-import Menu from './components/Menu/Menu';
+// import logo from './logo.svg';
+import './App.css'
+import NewToDoItem from './components/ToDo/NewToDoItem'
 import ToDos from './components/ToDo/ToDos';
 // redux
 import { useSelector, useDispatch } from 'react-redux'
@@ -19,7 +19,7 @@ const App = () => {
         <Typography variant="h3" component="div" gutterBottom>
           To Do List App
         </Typography>
-        <Menu></Menu>
+        <NewToDoItem />
         <ToDos items={users.info.items}></ToDos>
       </Container>
     </div>

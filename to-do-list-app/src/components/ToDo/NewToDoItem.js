@@ -28,8 +28,6 @@ const Menu = () => {
     const users = useSelector(state => state.users)
     const dispatch = useDispatch()
 
-    const [searchString, setSearchString] = useState();
-
     const testItem = [
         {
             id: 'e5',
@@ -44,11 +42,11 @@ const Menu = () => {
     }
 
     const notify = () => toast("Successfully Created!");
-
+    
     // console.log(moment().format('MMMM Do YYYY, h:mm:ss a'), 'abc');
     // console.log(moment().format('yyyy-MM-DD Thh:mm'), 'julius');
 
-    console.log(state, 'sate');
+    console.log(state, 'state');
 
     return (
 
@@ -103,8 +101,8 @@ const Menu = () => {
 
                 <Grid item xs={6}>
                     <Box m={2}>
-                        
-        <ToastContainer />
+
+                        <ToastContainer />
                         <Button
                             variant="contained"
                             onClick={() => handleOnClick()}
@@ -112,38 +110,8 @@ const Menu = () => {
                             Create ToDo Item</Button>
                     </Box>
                 </Grid>
-
             </Grid>
-
-
-            <Grid item xs={4}>
-
-            </Grid>
-            {/* <Grid item xs={4}>
-                <TextField
-                    id="outlined-multiline-flexible"
-                    label="Details"
-                    multiline
-                    maxRows={4}
-                //value={value}
-                //onChange={handleChange}
-                />
-            </Grid>
-            <Grid item xs={4}>
-                <Item>xs=4</Item>
-            </Grid>
-            <Grid item xs={8}>
-                <Item>xs=8</Item>
-            </Grid> */}
         </Grid>
-
-        // <Stack spacing={2} direction="row">
-
-
-
-
-        //     <Button variant="contained" onClick={() => handleOnClick()} >Create To Do Item</Button>
-        // </Stack>
     )
 }
 
